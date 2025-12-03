@@ -1,0 +1,24 @@
+sequenceDiagram 
+
+participant browser
+participant server
+
+Note right of browser: The browser makes a GET request to the URL and the server returns the 200 code
+
+browser->>server: HTTP GET  https://studies.cs.helsinki.fi/exampleapp/notes
+server-->>browser: 200 Found HTML document
+
+Note right of server: the server returns the CSS file
+
+browser->>server: 200 - HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->>browser: CSS document
+
+Note right of server: the server returns the CSS file
+
+browser->>server: 200 - HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->>browser: JS document
+
+Note right of server: The server returns all the information in the JSON file.
+
+browser->>server: 200 - HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->>browser: JSON  document

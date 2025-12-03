@@ -1,0 +1,13 @@
+ sequenceDiagram 
+    participant browser
+    participant server
+    
+    
+    Note right of browser: The browser starts executing the JavaScript making a POST request 
+    browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    
+    Note right of browser: Server responds with a 201 Create
+    server-->>browser: 201 CREATE
+    
+    Note right of browser: el navegador hace una petición POST a la url y el servidor le devuelve el codigo 302 conforme se ha creado el nuevo registro
+
