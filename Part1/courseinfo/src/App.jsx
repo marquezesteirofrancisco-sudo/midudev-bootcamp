@@ -21,42 +21,53 @@ const App = () => {
   return (
     <div>
       <Header course={course}/>
-      <Content  parts={course} />
-      <Total parts={course} />
+      <Content  course={course} />
+      <Total course={course} />
     </div>
   )
 }
 
 const Header = (props) => {
+   const courseName = props.course.name
    return(
-    <h1>{props.course.name}</h1>
+    <h1>{courseName}</h1>
    )
 }
 
 const Content = (props) => {
+   
+  const couseParts = props.course.parts
+
    return(
       <div>
-        <Part parts={props}/> 
+        <Part parts={couseParts}/> 
       </div>
    )
 }
 
 const Total = (props) => {
-   return(
+
+  const courseParts = props.course.parts
+
+  return(
       <div>
-        <p>Number of exercises {props.parts.parts[0].exercises  + props.parts.parts[1].exercises + props.parts.parts[2].exercises}</p>
+        <p>Number of exercises {courseParts[0].exercises  + courseParts[1].exercises + courseParts[2].exercises}</p>
       </div>
-   )
+  )
 }
 
 
 const Part = (props) => {
+
+  const courseParts = props.parts
+
+
    return(
       <div>
         {
 
           <div>
-            {props.parts.parts.parts.map((curso, index) => (
+            {courseParts.map((curso, index) => (
               <div key={index}>
                 <p>{curso.name} {curso.exercises}</p>
               </div>
