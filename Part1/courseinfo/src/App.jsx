@@ -61,7 +61,6 @@ const Part = (props) => {
 
   const courseParts = props.parts
 
-
    return(
       <div>
         {
