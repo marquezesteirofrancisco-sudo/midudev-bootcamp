@@ -1,0 +1,22 @@
+h1 {
+  color: black;
+}
+
+li {
+  color: grey;
+  padding-top: 3px;
+  font-size: 15px;
+}
+
+.NoError {
+  color: green;
+  background-color: darkgrey;
+  border: 1px green solid 
+}
+
+
+.IsError {
+  color: red;
+  background-color: darkgrey;
+  border: 1px red solid 
+}
