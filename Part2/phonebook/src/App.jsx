@@ -8,13 +8,15 @@ import './index.css'
 
 const App = () => {
 
-  const [persons, setPersons] = useState([
+/*   const [persons, setPersons] = useState([
     { firstName: 'Arto Hellas', phoneNumber: '040-123456', id: 1 },
     { firstName: 'Ada Lovelace', phoneNumber: '39-44-5323523', id: 2 },
     { firstName: 'Dan Abramov', phoneNumber: '12-43-234345', id: 3 },
-    { firstName: 'Mary Poppendieck', phoneNumber: '39-23-6423122', id: 4 }
-  ])
+    { firstName: 'Mary Poppendieck', phoneNumber: '39-23-6423122', id: 4 },
+    { firstName: 'Francisco', phoneNumber: '39-23-6423122', id: 5 },
+  ]) */
   
+   const [persons, setPersons] = useState([]) 
 
   const [newName, setNewName] = useState('')
   const [newPhone, setNewPhone] = useState('')
@@ -22,13 +24,14 @@ const App = () => {
   const [Message, setMessage] = useState('')
   const [isError, setIsError] = useState(false)
 
+  let filterPerson = null
 
   const Cargando = () => {
 
     agendaServices.getAll()
     .then(response => {
         console.log('promise fulfilled')
-        
+        console.log(response.data)
         setPersons(response.data)
     })
   }
@@ -49,7 +52,6 @@ const App = () => {
     setTimeout (() => {setMessage('') ; setIsError(false)  } , 5000 )
 
   }
-
 
   // ****
   // Metodo para añadir la nueva nombre al array
@@ -156,7 +158,12 @@ const App = () => {
     }
   } 
 
-  const filterPerson = persons.filter((person) => person.firstName.toLowerCase().includes(newFilter.toLowerCase()));
+  if (newFilter) 
+     filterPerson = persons.filter((person) => person.firstName.toLowerCase().includes(newFilter.toLowerCase()));
+  else
+     filterPerson = persons
+  
+  
 
   return (
     <>
@@ -169,7 +176,7 @@ const App = () => {
 
         <PersonsForms newName={newName} newPhone={newPhone} onChange={handleInputChange} onClick={addNamePhoneBook} />
 
-        <Persons persons={filterPerson} handleDelete={handleDelete}/>
+        <Persons persons={filterPerson} handleDelete={handleDelete}/> 
 
       </div>    
     </>

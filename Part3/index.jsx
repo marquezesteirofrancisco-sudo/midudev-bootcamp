@@ -1,8 +1,10 @@
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 morgan.token('body', (req) => JSON.stringify(req.body));
 
@@ -21,23 +23,34 @@ app.use( (request, response, next) => {
 let persons = [
     { 
       id: 1,
-      name: "Arto Hellas.", 
-      number: "040-123456"
+      firstName: "Arto Hellas.", 
+      phoneNumber: "040-123456"
     },
     { 
       id: 2,
-      name: "Ada Lovelace", 
-      number: "39-44-5323523"
+      firstName: "Ada Lovelace", 
+      phoneNumber: "39-44-5323523"
     },
     { 
       id: 3,
-      name: "Dan Abramov", 
-      number: "12-43-234345"
+      firstName: "Dan Abramov", 
+      phoneNumber: "12-43-234345"
     },
     { 
       id: 4,
-      name: "Mary Poppendieck", 
-      number: "39-23-6423122"
+      firstName: "Mary Poppendieck", 
+      phoneNumber: "39-23-6423122"
+    },
+    { 
+      id: 5,
+      firstName: "Francisco Marquez", 
+      phoneNumber: "39-23-6423122"
+    }
+    ,
+    { 
+      id: 6,
+      firstName: "Francisco Marquez Estteve", 
+      phoneNumber: "39-23-6423122"
     }
 ]
 
@@ -103,7 +116,7 @@ app.post('/api/persons/', (request, response) => {
 
 
     // compruebo que tiene todos los datos
-    if (!person.name) {
+    if (!person.firstName) {
         return response.status(400).json(
         { 
             error: 'You have not entered the registration name' 
@@ -111,7 +124,7 @@ app.post('/api/persons/', (request, response) => {
     }
 
 
-    if (!person.number) {
+    if (!person.phoneNumber) {
         return response.status(400).json(
         { 
             error: 'You have not entered the registration number.' 
@@ -119,7 +132,7 @@ app.post('/api/persons/', (request, response) => {
     }
 
     // compruebo que no existe el registro con el nombre
-    if (persons.some(p => p.name === person.name))
+    if (persons.some(p => p.firstName === person.firstName))
     {
         console.log("ready exist..");
         return response.status(401).json(
@@ -134,8 +147,8 @@ app.post('/api/persons/', (request, response) => {
 
     const newPerson = {
       "id": maxId+1,
-      "name": person.name, 
-      "number": person.number
+      "firstName": person.firstName, 
+      "phoneNumber": person.phoneNumber
     }
 
     persons = [...persons, newPerson]

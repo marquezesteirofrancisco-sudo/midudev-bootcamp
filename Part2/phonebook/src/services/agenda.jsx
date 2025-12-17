@@ -1,10 +1,7 @@
 import axios from 'axios'
 
-const baseUrl = 'http://localhost:3001/persons'
-
-const baseUrl2 = 'https://jsonplaceholder.typicode.com/posts'
-
-
+const baseUrl_TEST = 'http://localhost:3001/api/persons'
+const baseUrl =     'https://phonebook-api-backend-xjvo.onrender.com/api/persons'
 
 const getAll = () => {
   return axios.get(baseUrl)
