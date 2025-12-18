@@ -2,14 +2,14 @@ GET http://localhost:3001/api/persons/
 
 ###
 
-GET http://localhost:3001/api/persons/1
+GET http://localhost:3001/api/persons/6942e115873285260e4171efwe
 
 ###
-GET http://localhost:3001/api/persons/1212
+GET http://localhost:3001/api/persons/6942e115873285260e4171ef
 
 ###
 
-DELETE http://localhost:3001/api/persons/1
+DELETE http://localhost:3001/api/persons/6942e12a873285260e4171f2
 
 ###
 
@@ -17,8 +17,17 @@ POST http://localhost:3001/api/persons/
 Content-Type: application/json
 
 {  
-    "id": 4,
-    "name": "Francsco Marquez",
-    "number": "dfsfcc"
+    "firstName": "Fransdasdasdasdasd",
+    "phoneNumber": "986-888888888"
+    
+}
+
+###
+PUT http://localhost:3001/api/persons/6942dffe4259814059b9fb21
+Content-Type: application/json
+
+{  
+    "firstName": "Fran",
+    "phoneNumber": "986-420338"
     
 }

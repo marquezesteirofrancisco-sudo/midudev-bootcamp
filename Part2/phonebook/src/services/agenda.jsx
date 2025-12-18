@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-const baseUrl_TEST = 'http://localhost:3001/api/persons'
 const baseUrl =     'https://phonebook-api-backend-xjvo.onrender.com/api/persons'
 
 const getAll = () => {
