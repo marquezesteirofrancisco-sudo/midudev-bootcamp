@@ -73,7 +73,9 @@ if (showPersons) {
 
     }).catch((error) => {
         console.log('Error al buscar las personas:', error);
-    }); 
+    }).finally(() => {
+        mongoose.connection.close();
+    })
 
 }
 
@@ -91,7 +93,12 @@ if (createNewPerson) {
       console.log(`added ${firstName} number ${phoneNumber} to phonebook`)
       
       response.status(201).json(savedPerson)
+  }).catch((error) => {
+      console.log('Error al guardar la persona:', error.message);
+  }).finally(() => {
+      mongoose.connection.close();
   }) 
+
 
 }
 
