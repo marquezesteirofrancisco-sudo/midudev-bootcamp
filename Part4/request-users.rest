@@ -1,0 +1,21 @@
+GET http://localhost:3001/api/users
+
+###
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{  
+  "username": "JuanchoMarancho2",
+  "password": "1234567890",
+  "name": "Francisco Marquez Esteiro"
+}
+
+
+
+###
+
+DELETE http://localhost:3001/api/users/694bc590c230862174d43d02
+
+
+  

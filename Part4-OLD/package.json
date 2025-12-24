@@ -1,0 +1,28 @@
+{
+  "name": "part4",
+  "version": "1.0.0",
+  "description": "proyecto de la parte 4 del bootcamp",
+  "license": "ISC",
+  "author": "Francisco Marquez",
+  "type": "commonjs",
+  "main": "index.jsx",
+  "scripts": {
+    "start": "node index.jsx",
+    "dev": "nodemon index.jsx",
+    "test:jest": "cross-env NODE_ENV=test jest --verbose",
+    "test:node": "node --test"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.0.2"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.1.4",
+    "test": "^3.3.0"
+  }
+}

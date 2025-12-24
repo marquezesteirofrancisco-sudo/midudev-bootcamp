@@ -1,0 +1,40 @@
+GET http://localhost:3001/api/blogs
+
+###
+
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGJjNWZmM2RiOGU0ZDljYTBkMjJhZCIsImlhdCI6MTc2NjU3NzI5MiwiZXhwIjoxNzY2NTgwODkyfQ.rEfK7MKr89AwB4nBobRM8RJfoXGLS7K5KZF92bVtcBg
+
+{  
+  "author": "Francisco 1",
+  "url": "hola que tal",
+  "title": "muy bien",
+  "likes": 100
+}
+
+
+###
+
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzIiLCJpZCI6IjY5NGJjNjAzM2RiOGU0ZDljYTBkMjJhZiIsImlhdCI6MTc2NjU3NzI2MiwiZXhwIjoxNzY2NTgwODYyfQ.RxV_4t5OUr2CCX6eKJzmDHyjdfZ5otGyRcEdNMhRdEs
+
+{  
+  "author": "Francisco 2",
+  "url": "hola que tal 2",
+  "title": "muy bien 2",
+  "likes": 100
+}
+
+
+###
+
+DELETE http://localhost:3001/api/blogs/694bd535252c24938fb3ca19
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGJjNWZmM2RiOGU0ZDljYTBkMjJhZCIsImlhdCI6MTc2NjU3NzI5MiwiZXhwIjoxNzY2NTgwODkyfQ.rEfK7MKr89AwB4nBobRM8RJfoXGLS7K5KZF92bVtcBg
+
+
+###
+
+DELETE http://localhost:3001/api/blogs/694bd536252c24938fb3ca1d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzIiLCJpZCI6IjY5NGJjNjAzM2RiOGU0ZDljYTBkMjJhZiIsImlhdCI6MTc2NjU3NzI2MiwiZXhwIjoxNzY2NTgwODYyfQ.RxV_4t5OUr2CCX6eKJzmDHyjdfZ5otGyRcEdNMhRdEs
