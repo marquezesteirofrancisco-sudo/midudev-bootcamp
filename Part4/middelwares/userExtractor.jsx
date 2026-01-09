@@ -7,6 +7,8 @@ module.exports = async (request, response, next) => {
 
     let token =''
 
+    console.log("mi token" + authorization)
+
     if (authorization && authorization.toLowerCase().startsWith('bearer')){
         token = authorization.substring(7)
     }

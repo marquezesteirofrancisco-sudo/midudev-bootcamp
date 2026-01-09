@@ -9,6 +9,9 @@ blogsRouter.get('/', async (request, response) => {
 
   const result = await Blog.find({}).populate('user', { username: 1, name: 1});                                   
 
+
+  result.sort((a, b) => b.likes - a.likes)
+
   response.json(result)
 
 })
@@ -70,6 +73,15 @@ blogsRouter.delete('/:id', userExtractor, async (request, response) => {
 })
 
 
+// METODO PUT
+blogsRouter.put('/:id', async (request, response) => {
+
+  const { title, author, url, likes } = request.body;
+
+  const result = await Blog.findByIdAndUpdate(request.params.id, { title, author, url, likes }, { new: true })
+
+  response.json(result)
+})
 
 module.exports = blogsRouter
 

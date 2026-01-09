@@ -6,16 +6,16 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {  
-  "username": "JuanchoMarancho2",
+  "username": "JuanchoMarancho1",
   "password": "1234567890",
-  "name": "Francisco Marquez Esteiro"
+  "name": "Francisco Marquez Esteiro 1"
 }
 
 
 
 ###
 
-DELETE http://localhost:3001/api/users/694bc590c230862174d43d02
+DELETE http://localhost:3001/api/users/694e599430a7b03ce82956d0
 
 
   

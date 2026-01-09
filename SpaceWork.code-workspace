@@ -1,16 +1,7 @@
 {
 	"folders": [
 		{
-			"name": "Part3",
-			"path": "Part3"
-		},
-		{
-			"name": "phonebook",
-			"path": "Part2/phonebook"
-		},
-		{
-			"name": "notes-api-backend",
-			"path": "../notes-api-backend"
+			"path": "Part4"
 		}
 	],
 	"settings": {}

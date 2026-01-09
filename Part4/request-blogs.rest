@@ -4,7 +4,7 @@ GET http://localhost:3001/api/blogs
 
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGJjNWZmM2RiOGU0ZDljYTBkMjJhZCIsImlhdCI6MTc2NjU3NzI5MiwiZXhwIjoxNzY2NTgwODkyfQ.rEfK7MKr89AwB4nBobRM8RJfoXGLS7K5KZF92bVtcBg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGU2YjkxMzlhOWMxMzUyNmU3NTIyYiIsImlhdCI6MTc2Njc0NzA0OCwiZXhwIjoxNzY2NzUwNjQ4fQ.q0EVxOpLugjL-8BDIXvZGRQ6l4F48aaxmhn6Piix7aI
 
 {  
   "author": "Francisco 1",
@@ -17,12 +17,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1Y
 ###
 
 POST http://localhost:3001/api/blogs
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzIiLCJpZCI6IjY5NGJjNjAzM2RiOGU0ZDljYTBkMjJhZiIsImlhdCI6MTc2NjU3NzI2MiwiZXhwIjoxNzY2NTgwODYyfQ.RxV_4t5OUr2CCX6eKJzmDHyjdfZ5otGyRcEdNMhRdEs
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGU2YjkxMzlhOWMxMzUyNmU3NTIyYiIsImlhdCI6MTc2Njc1NTE4MywiZXhwIjoxNzY2NzU4NzgzfQ.OaTKjn0gfmp6J8IOe9rF8cms8FDZt41jADGg8XaZ-q0
 
 {  
-  "author": "Francisco 2",
-  "url": "hola que tal 2",
+  "author": "Francisco 2sss1111ssssssssssddd",
+  "url": "hola que tal 2sss444sdddsss",
   "title": "muy bien 2",
   "likes": 100
 }
@@ -30,11 +30,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1Y
 
 ###
 
-DELETE http://localhost:3001/api/blogs/694bd535252c24938fb3ca19
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGJjNWZmM2RiOGU0ZDljYTBkMjJhZCIsImlhdCI6MTc2NjU3NzI5MiwiZXhwIjoxNzY2NTgwODkyfQ.rEfK7MKr89AwB4nBobRM8RJfoXGLS7K5KZF92bVtcBg
+DELETE http://localhost:3001/api/blogs/694e6bcb39a9c13526e75231
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGU2YjkxMzlhOWMxMzUyNmU3NTIyYiIsImlhdCI6MTc2Nzc4NjkxOCwiZXhwIjoxNzY3NzkwNTE4fQ.pvMvQ98gPs7LDdP_i9unCQNktOGUm-te5eb-An1nl9A
 
 
 ###
 
-DELETE http://localhost:3001/api/blogs/694bd536252c24938fb3ca1d
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzIiLCJpZCI6IjY5NGJjNjAzM2RiOGU0ZDljYTBkMjJhZiIsImlhdCI6MTc2NjU3NzI2MiwiZXhwIjoxNzY2NTgwODYyfQ.RxV_4t5OUr2CCX6eKJzmDHyjdfZ5otGyRcEdNMhRdEs
+DELETE http://localhost:3001/api/blogs/694e8c1f39a9c13526e75317
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGU2YjkxMzlhOWMxMzUyNmU3NTIyYiIsImlhdCI6MTc2Nzc4NjkxOCwiZXhwIjoxNzY3NzkwNTE4fQ.pvMvQ98gPs7LDdP_i9unCQNktOGUm-te5eb-An1nl9A
+
+
+###
+
+PUT http://localhost:3001/api/blogs/694e6bcb39a9c13526e75231
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1YW5jaG9NYXJhbmNobzEiLCJpZCI6IjY5NGU2YjkxMzlhOWMxMzUyNmU3NTIyYiIsImlhdCI6MTc2Nzc4NjkxOCwiZXhwIjoxNzY3NzkwNTE4fQ.pvMvQ98gPs7LDdP_i9unCQNktOGUm-te5eb-An1nl9A
+
+{  
+    "title": "muy bien",
+    "author": "Francisco 1",
+    "url": "hola que tal",
+    "likes": 102
+}
